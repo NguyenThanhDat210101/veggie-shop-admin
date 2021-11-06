@@ -1,0 +1,26 @@
+<div id="wrapper">
+    <app-sidebar></app-sidebar>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <div id="content">
+
+      <!-- start -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let chatMessage of webSocketService.chatMessages">
+                <strong>{{chatMessage.user}} </strong>
+                <span>{{chatMessage.message}}</span>
+            </li>
+        </ul>
+      <!-- end  -->
+
+            <app-header></app-header>
+
+            <router-outlet></router-outlet>
+
+        </div>
+        <app-footer></app-footer>
+
+    </div>
+
+</div>
